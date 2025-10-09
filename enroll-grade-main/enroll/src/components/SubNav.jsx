@@ -15,13 +15,21 @@ export const Sub_Nav = ({ activeSection, onSectionChange }) => {
       { id: "gradingSummary", label: "Grading Summary" },
     ];
   } 
-  else if (path === "/admin-enrollment") {
+  
+  else if (path === "/analytics") {
     sections = [
-      { id: "pendingApplications", label: "Pending Applications" },
-      { id: "approvedStudents", label: "Approved Students" },
-      { id: "rejectedApplications", label: "Rejected Applications" },
-    ];
-  } 
+      {id: "enrollmentForecast",label:"Enrollment Forecast"},
+      {id:"dropoutTrend", label:"Dropout Trend"},
+      {id:"gradePerformance", label:"Grade Performance"},
+    ]
+  }
+
+  else if (path === "/placement") {
+    sections = [
+      {id: "sectionList", label: "Section List"},
+      {id: "studentList", label: "Student List"},
+    ]
+  }
   else {
     
     return null;

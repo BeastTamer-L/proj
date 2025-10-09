@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./navigationbar.css";
 
-export const Navigation_Bar = ({ userRole,activeSection, onSectionChange }) => {
+export const Navigation_Bar = ({ userRole, activeSection, onSectionChange }) => {
   if (userRole === "student") {
     return (
       <div className="nav-bar">
@@ -38,18 +38,18 @@ export const Navigation_Bar = ({ userRole,activeSection, onSectionChange }) => {
   if (userRole === "super_admin") {
     return (
       <>
-      <div className="nav-bar">
-        <div className="navigation-bar">
-          <NavLink to="/Dashboard" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{textDecoration:"none"}}>Dashboard</NavLink>
-          <span className="nav-item">Analytics</span>
-          <NavLink to="/Admin-Enrollment" className={({ isActive }) => isActive ? "nav-item active" :"nav-item"} style={{textDecoration:"none"}}>Enrollment</NavLink>
-          <span className="nav-item">Placement</span>
-          <span className="nav-item">Scheduling</span>
-          <span className="nav-item">Grades</span>
-          <span className="nav-item">Manage</span>
+        <div className="nav-bar">
+          <div className="navigation-bar">
+            <NavLink to="/Dashboard" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Dashboard</NavLink>
+            <NavLink to="/Analytics" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Analytics</NavLink>
+            <NavLink to="/Admin-Enrollment" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Enrollment</NavLink>
+            <NavLink to="/Placement" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Placement</NavLink>
+            <NavLink to="/Scheduling" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Scheduling</NavLink>
+            <NavLink to="/Admin-Grades" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Grades</NavLink>
+            <NavLink to="/Manage" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Manage</NavLink>
+          </div>
+
         </div>
-        
-      </div>
       </>
     );
   }
@@ -57,42 +57,16 @@ export const Navigation_Bar = ({ userRole,activeSection, onSectionChange }) => {
   if (userRole === "admin") {
     return (
       <>
-      <div className="nav-bar">
-        <div className="navigation-bar">
-          <span className="nav-item">Dashboard</span>
-          <span className="nav-item">Analytics</span>
-          <span className="nav-item">Enrollment</span>
-          <span className="nav-item">Placement</span>
-          <span className="nav-item">Scheduling</span>
-          <span className="nav-item">Grades</span>
+        <div className="nav-bar">
+          <div className="navigation-bar">
+            <NavLink to="/Dashboard" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Dashboard</NavLink>
+            <NavLink to="/Analytics" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Analytics</NavLink>
+            <NavLink to="/Admin-Enrollment" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Enrollment</NavLink>
+            <NavLink to="/Placement" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Placement</NavLink>
+            <NavLink to="/Scheduling" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Scheduling</NavLink>
+            <NavLink to="/Admin-Grades" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Grades</NavLink>
+          </div>
         </div>
-        <div className="dashboard-sub-nav">
-          <span
-            className={`sub-nav-item ${activeSection === "" ? "active" : ""}`}
-            onClick={() => onSectionChange("enrollmentOverview")}
-          >
-            Enrollment Overview
-          </span>
-          <span
-            className={`sub-nav-item ${activeSection === "studentDistribution" ? "active" : ""}`}
-            onClick={() => onSectionChange("studentDistribution")}
-          >
-            Student Distribution
-          </span>
-          <span
-            className={`sub-nav-item ${activeSection === "faculty" ? "active" : ""}`}
-            onClick={() => onSectionChange("faculty")}
-          >
-            Faculty Assignment
-          </span>
-          <span
-            className={`subNavItem ${activeSection === "grading" ? "active" : ""}`}
-            onClick={() => onSectionChange("grading")}
-          >
-            Grading Summary
-          </span>
-        </div>
-      </div>
       </>
     );
   }

@@ -11,7 +11,6 @@ export const Admin_Enrollment = () => {
     <>
       <Header />
       <Navigation_Bar userRole="super_admin" activeSection="enrollment" />
-      {/* Only the modal is conditionally rendered */}
       {showConfirmation && (
         <Confirmation_Modal
           show={showConfirmation}
