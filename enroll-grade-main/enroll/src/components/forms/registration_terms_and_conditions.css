@@ -102,7 +102,7 @@ ol ul li {
   width: 100%;
 }
 
-button {
+.buttons button {
   display: block;
   background: #248041;
   color: #fff;
@@ -115,12 +115,12 @@ button {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-button:hover:not(:disabled) {
+.buttons button:hover:not(:disabled) {
   opacity: 0.9;
   transform: scale(1.02);
 }
 
-button:disabled {
+.buttons button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }

@@ -15,7 +15,7 @@ export const Admin_Scheduling = () => {
                 <h2>Schedules</h2>
                 <div className='adminSchedulesSorter'>
                     <div className='adminScheduleSearch'>
-                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i className="fa fa-search" aria-hidden="true"></i>
                         <input className='adminScheduleSearchBar' />
                     </div>            
                     <div className="adminScheduleSortSubject">
@@ -36,7 +36,7 @@ export const Admin_Scheduling = () => {
                     <div className="adminScheduleSortSection">
                         <label>Section</label>
                         <select>
-                            <optio>Sample</optio>
+                            <option>Sample</option>
                         </select>
                     </div>
                 </div>

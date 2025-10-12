@@ -135,18 +135,6 @@ input:checked + .slider::before {
   transform: translateX(20px);
 }
 
-.bulk-accept {
-  background-color: #2d7a32;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.bulk-accept:hover {
-  background-color: #25642a;
-}
-
 .table-container {
   overflow-x: auto;
   background: white;
@@ -168,18 +156,6 @@ input:checked + .slider::before {
   padding: 10px;
   border: 1px solid #ccc;
   font-size: 0.9rem;
-}
-
-.accept-btn {
-  background-color: #2d7a32;
-  color: white;
-  border: none;
-  padding: 4px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.accept-btn:hover {
-  background-color: #25642a;
 }
 
 a {
