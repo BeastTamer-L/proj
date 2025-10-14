@@ -1,5 +1,6 @@
 import { Header } from "../../components/Header";
 import { Navigation_Bar } from "../../components/NavigationBar";
+import { useNavigate } from "react-router-dom";
 import './applicant_homepage.css'
 
 export const Applicant_Homepage = () => {

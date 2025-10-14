@@ -58,12 +58,12 @@
     gap: 16px;
 }
 
-.studentData {
+.student_Data {
     display: flex;
     flex-direction: column;
 }
 
-.studentData input {
+.student_Data input {
     height: 40px;
     width: 250px;
     background-color: #fff;

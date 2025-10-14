@@ -29,33 +29,33 @@ export const Student_Enrollment = () => {
                                     <h1>Student Information</h1>
                                     <div className="studentInfo">
                                         <div className="studentDataInfos">
-                                            <div className="studentData">
+                                            <div className="student_Data">
                                                 <label>LRN</label>
                                                 <input disabled />
                                             </div>
-                                            <div className="studentData">
+                                            <div className="student_Data">
                                                 <label>Grade Level</label>
                                                 <input disabled />
                                             </div>
-                                            <div className="studentData">
+                                            <div className="student_Data">
                                                 <label>School Year</label>
                                                 <input disabled />
                                             </div>
                                         </div>
                                         <div className="studentDataInfos">
-                                            <div className="studentData">
+                                            <div className="student_Data">
                                                 <label>Last Name</label>
                                                 <input disabled />
                                             </div>
-                                            <div className="studentData">
+                                            <div className="student_Data">
                                                 <label>First Name</label>
                                                 <input disabled />
                                             </div>
-                                            <div className="studentData">
+                                            <div className="student_Data">
                                                 <label>Middle Name</label>
                                                 <input disabled />
                                             </div>
-                                            <div className="studentData">
+                                            <div className="student_Data">
                                                 <label>Suffix</label>
                                                 <input type="text" className="suffix" disabled />
                                             </div>
