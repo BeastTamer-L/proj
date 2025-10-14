@@ -10,13 +10,13 @@ import { ReusableConfirmationModalBox } from '../../components/modals/Reusable_C
 export const Admin_Placement = () => {
     const [showModal, setShowModal] = useState(false);
     const [showOverrideSection, setShowOverrideSection] = useState(false);
+    const [showOverrideStudent,setShowOverrideStudent] = useState(false);
     const [showConfirm, setShowConfirm] = useState(false);
-    const [showApply, setShowApply] = useState(false);
+    const [showApplySection, setShowApplySection] = useState(false);
+    const [showApplyStudent, setShowApplyStudent] = useState(false);
     const [showApplyNotif, setShowApplyNotif] = useState(false);
     const [showAddNotif, setShowAddNotif] = useState(false);
-
     const [activeSection, setActiveSection] = useState("sectionList");
-
     const [sectionListGrade, setSectionListGrade] = useState("");
     const [sectionListSection, setSectionListSection] = useState("");
     const [studentListGrade, setStudentListGrade] = useState("");
@@ -42,7 +42,7 @@ export const Admin_Placement = () => {
                         <ReusableModalBox show={showModal} onClose={() => setShowModal(false)}>
                             <div className='addNewSection'>
                                 <div className='back'>
-                                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
                                 </div>
                                 <div className='addNewSectionInput'>
                                     <label>Section Name</label>
@@ -110,7 +110,7 @@ export const Admin_Placement = () => {
                                 </div>
                                 <div className='sectionListSort Section'>
                                     <label>Section</label>
-                                    <select value={sectionListSection} on onChange={(e) => setSectionListSection(e.target.value)}>
+                                    <select value={sectionListSection} onChange={(e) => setSectionListSection(e.target.value)}>
                                         <option value="">All Section</option>
                                         <option>sample</option>
                                     </select>
@@ -138,7 +138,7 @@ export const Admin_Placement = () => {
                                             <td>65</td>
                                             <td>Yes</td>
                                             <td>Ana Liza Ramirez</td>
-                                            <td><button>Override</button></td>
+                                            <td><button onClick={() => setShowOverrideSection(true)}>Override</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -147,35 +147,32 @@ export const Admin_Placement = () => {
                                 <button onClick={() => setShowModal(true)}>Add new section</button>
                             </div>
                         </div>
-                    </>
-                )}
-
-                {activeSection === "studentList" && (
-                    <>
                         <ReusableModalBox show={showOverrideSection} onClose={() => setShowOverrideSection(false)}>
-                            <div className='overrideStudent'>
-                                <div className='overrideStudentHeader'>
-                                    <h2>Override Section Assignment</h2>
+                            <div className='overrideSection'>
+                                <div className='overrideSectionHeader'>
+                                    <h2>Override Adviser Assignment</h2>
                                 </div>
                                 <div className='overrideSelection'>
-                                    <label>Section</label>
-                                    <select></select>
+                                    <label>Adviser</label>
+                                    <select>
+                                        <option>Teacher 1</option>
+                                    </select>
                                 </div>
                                 <div className='buttonContainer'>
                                     <button style={{ backgroundColor: "transparent", border: "1px solid black", color: 'black' }}>Cancel</button>
-                                    <button onClick={() => setShowApply(true)}>Apply</button>
+                                    <button onClick={() => setShowApplySection(true)}>Apply</button>
                                 </div>
                             </div>
                         </ReusableModalBox>
-                        <ReusableConfirmationModalBox showConfirm={showApply} onCloseConfirm={() => setShowApply(false)}>
-                            <div>
+                        <ReusableModalBox show={showApplySection} onClose={() => setShowApplySection(false)}>
+                            <div className='sectionApply'>
                                 <h2>Apply Changes?</h2>
                                 <div className='buttons'>
                                     <button onClick={() => setShowApplyNotif(true)}>Yes</button>
                                     <button style={{ backgroundColor: "transparent", color: "black", border: "1px solid black" }}>Cancel</button>
                                 </div>
                             </div>
-                        </ReusableConfirmationModalBox>
+                        </ReusableModalBox>
                         <ReusableModalBox show={showApplyNotif} onClose={() => setShowApplyNotif(false)}>
                             <div className='notif'>
                                 <div className='img' style={{ paddingTop: "10px" }}>
@@ -184,6 +181,11 @@ export const Admin_Placement = () => {
                                 <h2>Changes Applied Successfully!</h2>
                             </div>
                         </ReusableModalBox>
+                    </>
+                )}
+
+                {activeSection === "studentList" && (
+                    <>
                         <div className='studentList'>
                             <h2>Student List</h2>
                             <div className='studentListCards'>
@@ -225,7 +227,7 @@ export const Admin_Placement = () => {
                                 </div>
                                 <div className='studentListSort Section'>
                                     <label>Section</label>
-                                    <select value={studentListSection} on onChange={(e) => setStudentListSection(e.target.value)}>
+                                    <select value={studentListSection} onChange={(e) => setStudentListSection(e.target.value)}>
                                         <option value="">All Section</option>
                                         <option>sample</option>
                                     </select>
@@ -252,7 +254,7 @@ export const Admin_Placement = () => {
                                             <td>1</td>
                                             <td>Yes</td>
                                             <td>John Doe</td>
-                                            <td><button onClick={() => setShowOverrideSection(true)}>Override</button></td>
+                                            <td><button onClick={() => setShowOverrideStudent(true)}>Override</button></td>
                                         </tr>
                                         <tr>
                                             <td>2. Allen Biriani O.</td>
@@ -261,13 +263,45 @@ export const Admin_Placement = () => {
                                             <td>1</td>
                                             <td>Yes</td>
                                             <td>John Doe</td>
-                                            <td><button onClick={() => setShowOverrideSection(true)}>Override</button></td>
+                                            <td><button onClick={() => setShowOverrideStudent(true)}>Override</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
 
                             </div>
                         </div>
+                        <ReusableModalBox show={showOverrideStudent} onClose={() => setShowOverrideStudent(false)}>
+                            <div className='overrideStudent'>
+                                <div className='overrideStudentHeader'>
+                                    <h2>Override Section Assignment</h2>
+                                </div>
+                                <div className='overrideSelection'>
+                                    <label>Section</label>
+                                    <select></select>
+                                </div>
+                                <div className='buttonContainer'>
+                                    <button style={{ backgroundColor: "transparent", border: "1px solid black", color: 'black' }}>Cancel</button>
+                                    <button onClick={() => setShowApplyStudent(true)}>Apply</button>
+                                </div>
+                            </div>
+                        </ReusableModalBox>
+                        <ReusableModalBox show={showApplyStudent} onClose={() => setShowApplyStudent(false)}>
+                            <div className='studentApply'>
+                                <h2>Apply Changes?</h2>
+                                <div className='buttons'>
+                                    <button onClick={() => setShowApplyNotif(true)}>Yes</button>
+                                    <button style={{ backgroundColor: "transparent", color: "black", border: "1px solid black" }}>Cancel</button>
+                                </div>
+                            </div>
+                        </ReusableModalBox>
+                        <ReusableModalBox show={showApplyNotif} onClose={() => setShowApplyNotif(false)}>
+                            <div className='notif'>
+                                <div className='img' style={{ paddingTop: "10px" }}>
+                                    <img src="checkImg.png" style={{ height: "50px", width: "50px" }} />
+                                </div>
+                                <h2>Changes Applied Successfully!</h2>
+                            </div>
+                        </ReusableModalBox>
                     </>
                 )}
             </div>

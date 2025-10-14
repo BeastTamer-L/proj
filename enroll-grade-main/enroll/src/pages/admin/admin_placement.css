@@ -328,20 +328,21 @@
   transition: background-color 0.2s ease-in-out;
 }
 
-.overrideStudent {
+.overrideStudent,
+.overrideSection {
   border-radius: 12px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  overflow: hidden;
 }
 
-.overrideStudentHeader {
+.overrideStudentHeader,
+.overrideSectionHeader {
   background-color: #FDE69C;
   height: 55px;
   width: 100%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
 }
 
 .overrideSelection {
@@ -361,3 +362,10 @@
   font-weight: 500;
   color: #333;
 }
+
+.sectionApply,
+.studentApply {
+  width: 400px;
+  padding: 20px;
+}
+
