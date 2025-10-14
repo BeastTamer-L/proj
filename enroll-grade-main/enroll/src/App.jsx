@@ -13,6 +13,7 @@ import { Admin_Manage } from "./pages/admin/Admin-Manage";
 import { Student_Homepage } from "./pages/student/Student_Homepage";
 import { Student_Schedule } from "./pages/student/Student_Schedule";
 import { Student_Grades } from "./pages/student/Student_Grades";
+import { Student_Enrollment } from "./pages/student/Student_Enrollment";
 
 
 
@@ -28,7 +29,8 @@ function App() {
         {/*Student*/}
         <Route path="/Student_Homepage" element={<Student_Homepage />} />
         <Route path="/Student_Schedule" element={<Student_Schedule />} />
-                <Route path="/Student_Grades" element={<Student_Grades />} />
+        <Route path="/Student_Grades" element={<Student_Grades />} />
+        <Route path="/Student_Enrollment" element={<Student_Enrollment />} />
         {/*Admin*/}
         <Route path="/Dashboard" element={<Admin_Dashboard />}/>
         <Route path="/Analytics" element={<Admin_Analytics />} />

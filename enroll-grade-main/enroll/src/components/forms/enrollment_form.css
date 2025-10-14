@@ -69,8 +69,20 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.suffix input{
+.suffix{
+    height: 40px;
     width: 70px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .indigenous {
