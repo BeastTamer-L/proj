@@ -10,6 +10,9 @@ import { Admin_Placement } from "./pages/admin/Admin-Placement";
 import { Admin_Scheduling } from "./pages/admin/Admin-Scheduling";
 import { Admin_Grades } from "./pages/admin/Admin-Grades";
 import { Admin_Manage } from "./pages/admin/Admin-Manage";
+import { Student_Homepage } from "./pages/student/Student_Homepage";
+import { Student_Schedule } from "./pages/student/Student_Schedule";
+import { Student_Grades } from "./pages/student/Student_Grades";
 
 
 
@@ -22,6 +25,10 @@ function App() {
         {/*Applicant*/}
         <Route path="/Applicant_Homepage" element={<Applicant_Homepage />} />
         <Route path="/Applicant_Enroll" element={<Applicant_Enroll1 />} />
+        {/*Student*/}
+        <Route path="/Student_Homepage" element={<Student_Homepage />} />
+        <Route path="/Student_Schedule" element={<Student_Schedule />} />
+                <Route path="/Student_Grades" element={<Student_Grades />} />
         {/*Admin*/}
         <Route path="/Dashboard" element={<Admin_Dashboard />}/>
         <Route path="/Analytics" element={<Admin_Analytics />} />
