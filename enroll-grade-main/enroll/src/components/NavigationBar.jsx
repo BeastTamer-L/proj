@@ -27,10 +27,10 @@ export const Navigation_Bar = ({ userRole, activeSection, onSectionChange }) => 
   if (userRole === "teacher") {
     return (
       <div className="navigation-bar">
-        <span className="nav-item">Classes</span>
-        <span className="nav-item">Grading</span>
-        <span className="nav-item">Evaluation</span>
-        <span className="nav-item">Class schedule</span>
+        <NavLink to="/Teacher_Homepage" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Classes</NavLink>
+        <NavLink to="/Teacher_Grading" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Grading</NavLink>
+        <NavLink to="/Teacher_Evaluation" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Evaluation</NavLink>
+        <NavLink to="/Teacher_Schedule" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"} style={{ textDecoration: "none" }}>Class Schedule</NavLink>
       </div>
     );
   }

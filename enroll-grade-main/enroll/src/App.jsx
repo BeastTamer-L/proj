@@ -14,8 +14,10 @@ import { Student_Homepage } from "./pages/student/Student_Homepage";
 import { Student_Schedule } from "./pages/student/Student_Schedule";
 import { Student_Grades } from "./pages/student/Student_Grades";
 import { Student_Enrollment } from "./pages/student/Student_Enrollment";
-
-
+import { Teacher_Homepage } from "./pages/teacher/Teacher_Homepage";
+import { Teacher_Grading } from "./pages/teacher/Teacher_Grading";
+import { Teacher_Evaluation } from "./pages/teacher/Teacher_Evaluation";
+import { Teacher_Schedule } from "./pages/teacher/Teacher_Schedule";
 
 function App() {
   return (
@@ -31,6 +33,11 @@ function App() {
         <Route path="/Student_Schedule" element={<Student_Schedule />} />
         <Route path="/Student_Grades" element={<Student_Grades />} />
         <Route path="/Student_Enrollment" element={<Student_Enrollment />} />
+        {/*Teacher*/}
+        <Route path="/Teacher_Homepage" element={<Teacher_Homepage />} />
+        <Route path="/Teacher_Grading" element={<Teacher_Grading />} />
+        <Route path="/Teacher_Evaluation" element={<Teacher_Evaluation />} />
+        <Route path="/Teacher_Schedule" element={<Teacher_Schedule />} />
         {/*Admin*/}
         <Route path="/Dashboard" element={<Admin_Dashboard />}/>
         <Route path="/Analytics" element={<Admin_Analytics />} />
